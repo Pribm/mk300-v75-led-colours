@@ -1,0 +1,23 @@
+# Local inputs and build products
+/build/
+/inputs/
+/toolchain/
+*.fwsc
+*.bin
+*.o
+*.elf
+*.zip
+*.tar*
+__pycache__/
+*.py[cod]
+
+# Research workspace / agent files do not belong in this source distribution.
+/work/
+/analysis/
+/versions/
+AGENTS.md
+SKILL.md
+.codex/
+.agents/
+*.log
+.DS_Store
