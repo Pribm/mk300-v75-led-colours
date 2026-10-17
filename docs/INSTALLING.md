@@ -1,7 +1,14 @@
 # Installation
 
-This patch targets **MK300 V75**. Use the `.fwsc` produced by the
-[build instructions](BUILDING.md), whose SHA-256 is:
+This patch is **original MK300 V75 with the LED changes**. Install an earlier
+official MK300 firmware first, then install this patched V75 package. This
+downgrade-and-update sequence is the procedure reported by the successful tester;
+no specific older version or compatibility with every older release has been
+established.
+
+Download the `.fwsc` attached to the release on the
+[Releases page](https://github.com/Pribm/mk300-v75-led-colours/releases), or
+generate it using the [build instructions](BUILDING.md). Its SHA-256 is:
 
 ```text
 e3bcb3c7c3c2707db9636b34b873f46ae9cb82ee64b6adde981334f25c4d3122
@@ -11,16 +18,19 @@ e3bcb3c7c3c2707db9636b34b873f46ae9cb82ee64b6adde981334f25c4d3122
 
 1. Back up presets and other user data using the MK300 editor. Keep your known
    working firmware package available.
-2. Obtain **M-UPGRADE** and the MK300 update instructions from the
+2. Obtain **M-UPGRADE**, an earlier official MK300 firmware, and its update
+   instructions from the
    [manufacturer's download page](https://www.cuvave.com/download).
 3. Connect the MK300 to the computer by USB and open M-UPGRADE, following the
    manufacturer's connection procedure.
-4. Load `MK300_V75_Combined_Click_Hold_Colours_EXPERIMENTAL.fwsc` and start the
+4. **Downgrade to the earlier official firmware first.** Let the update and
+   startup finish, including any initialization required by that version.
+5. Load `MK300_V75_Combined_Click_Hold_Colours_EXPERIMENTAL.fwsc` and start the
    update. The `.app.bin` file is a build artifact, not the updater input.
-5. Keep power and USB connected until the updater and pedal complete the update.
+6. Keep power and USB connected until the updater and pedal complete the update.
    Follow the manufacturer's instructions for any initialization required when
    moving from a different stock firmware version.
-6. Load a preset and configure the Click/Hold Module CTL assignments normally.
+7. Load a preset and configure the Click/Hold Module CTL assignments normally.
    Test the combinations below.
 
 This is an experimental patch with a successful user-reported physical test;
